@@ -1,10 +1,10 @@
-import { EffectorSsr } from '#/lib/effector-next';
+import { EffectorNext } from '#/lib/effector-next';
 import { Counter } from '#/ui/counter';
 import { ExternalLink } from '#/ui/external-link';
 
 export default function Page() {
   return (
-    <EffectorSsr>
+    <EffectorNext>
       <div className="prose prose-sm prose-invert max-w-none">
         <h1 className="text-xl font-bold">Layouts</h1>
         <Counter />
@@ -26,6 +26,6 @@ export default function Page() {
           </ExternalLink>
         </div>
       </div>
-    </EffectorSsr>
+    </EffectorNext>
   );
 }

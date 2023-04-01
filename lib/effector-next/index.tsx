@@ -5,7 +5,7 @@ import { Provider } from 'effector-react';
 
 import { getScope } from './get-scope';
 
-export function EffectorSsr({
+export function EffectorNext({
   values,
   children,
 }: {
