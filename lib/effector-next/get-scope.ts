@@ -5,14 +5,16 @@ export const getScope =
   typeof window !== 'undefined' ? getClientScope : getServerScope;
 
 const _currentScope: Scope = fork();
-function getClientScope(values: Values) {
+function getClientScope(values?: Values) {
+  if (!values) return _currentScope;
+
   HACK_injectValues(_currentScope, values);
   HACK_resetScopeRefs(_currentScope);
 
   return _currentScope;
 }
 
-function getServerScope(values: Values) {
+function getServerScope(values?: Values) {
   return fork({ values });
 }
 

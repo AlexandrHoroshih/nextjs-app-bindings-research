@@ -9,7 +9,7 @@ export function EffectorSsr({
   values,
   children,
 }: {
-  values: Record<string, unknown>;
+  values?: Record<string, unknown>;
   children: ReactNode;
 }) {
   const scope = getScope(values);

@@ -1,3 +1,5 @@
+'use client';
+
 import { useUnit } from 'effector-react';
 
 import { $count, $serverCount, up } from '#/model/count';
