@@ -1,5 +1,5 @@
 import '#/styles/globals.css';
-import { EffectorNext } from '#/lib/effector-next';
+import { EffectorAppNext } from '#/app/effector-provider';
 import { AddressBar } from '#/ui/address-bar';
 import Byline from '#/ui/byline';
 import { GlobalNav } from '#/ui/global-nav';
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="[color-scheme:dark]">
       <body className="overflow-y-scroll bg-gray-1100 bg-[url('/grid.svg')]">
-        <EffectorNext>
+        <EffectorAppNext>
           <GlobalNav />
 
           <div className="lg:pl-72">
@@ -41,7 +41,7 @@ export default function RootLayout({
               <Byline className="fixed sm:hidden" />
             </div>
           </div>
-        </EffectorNext>
+        </EffectorAppNext>
       </body>
     </html>
   );

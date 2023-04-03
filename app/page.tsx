@@ -3,7 +3,7 @@ import { demos } from '#/lib/demos';
 import Link from 'next/link';
 import { serverUp } from '#/model/count';
 import { Counter } from '#/ui/counter';
-import { EffectorNext } from '#/lib/effector-next';
+import { EffectorAppNext } from '#/app/effector-provider';
 
 export default async function Page() {
   const scope = fork();
@@ -13,7 +13,7 @@ export default async function Page() {
   const values = serialize(scope);
 
   return (
-    <EffectorNext values={values}>
+    <EffectorAppNext values={values}>
       <div className="space-y-8">
         <h1 className="text-xl font-medium text-gray-300">Examples</h1>
         <Counter />
@@ -51,6 +51,6 @@ export default async function Page() {
           })}
         </div>
       </div>
-    </EffectorNext>
+    </EffectorAppNext>
   );
 }
